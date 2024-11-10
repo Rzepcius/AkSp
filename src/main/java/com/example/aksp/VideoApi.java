@@ -1,6 +1,7 @@
 package com.example.aksp;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,7 +25,8 @@ public class VideoApi {
         videoList.add(new Video(2L, "KOŃCZYMY APLIKACJE CHATU W SPRINGU I WDRAŻAMY JĄ NA SERWER VPS", "https://youtu.be/vKtFeOXCkHM"));
     }
 
-    @GetMapping
+    @GetMapping(produces = {MediaType.APPLICATION_XML_VALUE,
+            MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<List<Video>> getVideos(){
 
         return new ResponseEntity<>(videoList, HttpStatus.OK);
