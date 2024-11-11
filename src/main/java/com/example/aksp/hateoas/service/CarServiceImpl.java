@@ -1,14 +1,13 @@
-package hateoas.service;
+package com.example.aksp.hateoas.service;
 
-import hateoas.model.Car;
+import com.example.aksp.hateoas.model.Car;
 import org.springframework.stereotype.Service;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-import hateoas.model.Color;
+import com.example.aksp.hateoas.model.Color;
 
 @Service
 public class CarServiceImpl implements CarService {
@@ -36,7 +35,7 @@ public class CarServiceImpl implements CarService {
         carList.add(new Car(1L,"Mercedes", "GLC 300", Color.NAVY_BLUE));
         carList.add(new Car(2L,"Maserati", "Quattroporte", Color.MARINE));
         carList.add(new Car(3L,"Alfa Romeo","Giulia", Color.RED));
-        carList.add(new Car(4L,"Mercedes",  "EQC", Color.BLUE));
+        carList.add(new Car(4L,"Mercedes",  "EQC", Color.BLACK));
         carList.add(new Car(5L,"Ferrari",  "California", Color.BLACK));
         carList.add(new Car(6L,"Bugatti", "La Voiture Noire", Color.WHITE));
         return carList;

@@ -6,8 +6,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class AkSpApplicationTests {
 
+
+
     @Test
-    void contextLoads() {
+    void contextLoads() {//    Because fuck you sonar lint
     }
 
 }

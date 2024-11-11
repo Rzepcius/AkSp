@@ -42,23 +42,23 @@ public class VideoApi {
     }
 
     @PostMapping
-    public ResponseEntity addVideo(@RequestBody Video video) {
+    public ResponseEntity<HttpStatus> addVideo(@RequestBody Video video) {
         boolean add = videoList.add(video);
         if (add) {
-            return new ResponseEntity(HttpStatus.CREATED);
+            return new ResponseEntity<>(HttpStatus.CREATED);
         }
-        return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     @PutMapping
-    public ResponseEntity modVideo(@RequestBody Video newVideo) {
+    public ResponseEntity<HttpStatus> modVideo(@RequestBody Video newVideo) {
         Optional<Video> first = videoList.stream().filter(video -> video.getId() == newVideo.getId()).findFirst();
         if (first.isPresent()) {
             videoList.remove(first.get());
             videoList.add(newVideo);
-            return new ResponseEntity(HttpStatus.OK);
+            return new ResponseEntity<>(HttpStatus.OK);
         }
-        return new ResponseEntity(HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
     @DeleteMapping("/{id}")

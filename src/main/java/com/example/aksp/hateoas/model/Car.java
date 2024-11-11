@@ -1,6 +1,8 @@
-package hateoas.model;
+package com.example.aksp.hateoas.model;
 
-public class Car {
+import org.springframework.hateoas.RepresentationModel;
+
+public class Car extends RepresentationModel<Car> {
     private long carId;
     private String brand;
     private String model;

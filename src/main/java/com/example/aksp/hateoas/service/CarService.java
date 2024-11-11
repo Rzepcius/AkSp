@@ -1,6 +1,6 @@
-package hateoas.service;
+package com.example.aksp.hateoas.service;
 
-import hateoas.model.Car;
+import com.example.aksp.hateoas.model.Car;
 
 import java.util.List;
 import java.util.Optional;
