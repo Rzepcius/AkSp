@@ -1,6 +1,6 @@
 package com.example.aksp.bonus.hateoas.validation;
 
-import org.springframework.validation.annotation.Validated;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,7 +25,7 @@ public class MovieApi {
     }
 
     @PostMapping
-    public boolean addMovie(@Validated @RequestBody Movie movie){
+    public boolean addMovie(@Valid @RequestBody Movie movie){
         return movieList.add(movie);
     }
 }
