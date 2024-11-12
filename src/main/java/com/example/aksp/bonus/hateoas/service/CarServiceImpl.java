@@ -1,13 +1,13 @@
-package com.example.aksp.hateoas.service;
+package com.example.aksp.bonus.hateoas.service;
 
-import com.example.aksp.hateoas.model.Car;
+import com.example.aksp.bonus.hateoas.model.Car;
+import com.example.aksp.bonus.hateoas.model.Color;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-import com.example.aksp.hateoas.model.Color;
 
 @Service
 public class CarServiceImpl implements CarService {

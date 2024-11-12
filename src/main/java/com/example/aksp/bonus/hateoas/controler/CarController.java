@@ -1,7 +1,7 @@
-package com.example.aksp.hateoas.controler;
+package com.example.aksp.bonus.hateoas.controler;
 
-import com.example.aksp.hateoas.model.Car;
-import com.example.aksp.hateoas.service.CarService;
+import com.example.aksp.bonus.hateoas.model.Car;
+import com.example.aksp.bonus.hateoas.service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;

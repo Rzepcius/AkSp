@@ -1,4 +1,4 @@
-package com.example.aksp.hateoas.model;
+package com.example.aksp.bonus.hateoas.model;
 
 public enum Color {
     NAVY_BLUE,
