@@ -2,6 +2,7 @@ package com.example.aksp;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -35,6 +36,12 @@ public class CarController {
     @PostMapping("/add-car")
     private String addCar(@ModelAttribute  Car car){
         cars.add(car);
+        return "redirect:car";
+    }
+
+    @DeleteMapping("/del-car")
+    private String delCar(@ModelAttribute String model){
+        System.out.println();
         return "redirect:car";
     }
 }
