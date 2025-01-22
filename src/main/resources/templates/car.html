@@ -11,9 +11,12 @@
 <!--<p th:text="${car.getMark()}"></p>-->
 <!--<p th:text="${car.getModel()}"></p>-->
 
-<tr th:each="car: ${cars}">
+<tr th:each="car,iterStat : ${cars}">
     <td th:text="${car.getMark()}"/><br>
     <td th:text="${car.getModel()}"/><br>
+    <br/>
+    <a th:href="@{/car/delete/{index}(index=${iterStat.index})}">Usuń</a>
+    <a th:href="@{/car/edit/{index}(index=${iterStat.index})}">Edit</a>
     <p>=================</p>
 </tr>
 <form th:action="@{/add-car}" th:object="${newCar}" method="post">

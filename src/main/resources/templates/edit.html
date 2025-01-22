@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edytuj Elemnt</title>
+</head>
+<body>
+<p>Edytujesz element :</p>
+<br>
+<form th:action="@{/car/edit/{index}(index=${index})}" th:object="${car}" method="post">
+    <p>Model:<input th:type="text" th:field="*{model}"></p>
+    <p>Mark:<input th:type="text" th:field="*{mark}"></p>
+    <button type="submit">Tak, Edytuj</button>
+</form>
+
+<a th:href="@{/car}">Anuluj</a>
+</body>
+</html>

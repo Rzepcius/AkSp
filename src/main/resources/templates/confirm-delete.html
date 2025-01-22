@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Potwierdzenie usunięcia</title>
+</head>
+<body>
+<h1>Potwierdź usunięcie</h1>
+<p>Czy na pewno chcesz usunąć element: <strong th:text="${car}"></strong>?</p>
+
+<form th:action="@{/car/delete/{index}(index=${index})}" method="post">
+    <button type="submit">Tak, usuń</button>
+</form>
+
+<a th:href="@{/car}">Anuluj</a>
+</body>
+</html>
